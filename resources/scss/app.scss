@@ -1,1 +1,225 @@
 @import '~bootstrap/scss/bootstrap';
+
+
+
+* {
+    font-family: "Roboto Mono", monospace;
+}
+
+// Colors 
+$comic_primary: #0282f9;
+$comic_primary_dark: #01496e;
+$comic_primary_light: #00a9d9;
+$comic_success: #55ba59;
+$comic_lighter: #ffffff;
+$comic_light: #6d7b90;
+
+.comic_primary_dark {
+    color: $comic_primary_dark;
+}
+
+.comic_primary_light {
+    color: $comic_primary_light;
+}
+
+.comic_color_light {
+    color: $comic_light;
+}
+
+// Header 
+.top_header {
+    background-color: $comic_primary;
+    color: $comic_lighter;
+    font-size: 0.7rem;
+    text-align: end;
+    padding: 0.1rem;
+}
+
+.logo_dc {
+    height: 70px;
+}
+
+a.nav-link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.active_nav {
+    color: $comic_primary;
+    border-bottom: 4px solid $comic_primary;
+}
+
+.hero {
+    height: 21.5rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.search-input {
+    border-bottom: 2px solid $comic_primary;
+}
+
+// Comics page
+.label {
+    color: $comic_lighter;
+    background-color: $comic_primary;
+    padding: 0.7rem;
+    margin-left: 12px;
+    position: absolute;
+    top: -22px;
+    left: 0;
+    transform: translate(0%, 50%);
+}
+
+.current_series_box {
+    padding: 3rem 0;
+
+    a {
+        text-decoration: none;
+    }
+
+    .comic_card {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        background-color: $gray-900;
+        border: none;
+
+        .card_top {
+            height: 180px;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .card_text {
+            height: 4rem;
+        }
+    }
+}
+
+.call_foraction_banner {
+    height: 150px;
+    background-color: $comic_primary;
+
+    .call_foraction {
+        height: 100%;
+
+        >a {
+            height: 100%;
+            font-size: 0.9rem;
+        }
+
+        img {
+            height: 40%;
+        }
+
+        svg {
+            height: 30%;
+        }
+    }
+
+}
+
+//Footer
+
+footer {
+    height: 100px;
+    width: 100%;
+
+    .top_footer {
+        height: 100px;
+        width: 100%;
+        background-image: url(../img/footer-bg.jpg);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+
+        .footer_top_right {
+            width: 50%;
+
+            img {
+                margin-top: -70px;
+            }
+
+            h5 {
+                font-size: 1.3rem;
+            }
+
+            .links {
+                font-size: 0.8rem;
+
+                .dc_link:hover {
+                    color: $comic_primary;
+                }
+            }
+
+        }
+    }
+}
+
+//Single page layout
+
+.comic_img {
+    height: 250px;
+    width: fit-content;
+    margin-top: -260px;
+    position: relative;
+
+    >img {
+        height: 100%;
+        object-fit: contain;
+        border: 2px solid white;
+    }
+
+    .label_comic {
+        color: white;
+        font-size: 0.8rem;
+        background-color: $comic_primary_light;
+        padding: 0.1rem 0.4rem;
+        margin-left: 10px;
+        left: -8px;
+    }
+
+    .label_comic.type {
+        position: absolute;
+        top: -10px;
+        transform: translate(0%, 50%);
+    }
+
+    .label_comic.view {
+        width: calc(100% - 4px);
+        text-align: center;
+        position: absolute;
+        bottom: 12px;
+        transform: translate(0%, 50%);
+    }
+}
+
+.shop_box {
+    color: $comic_lighter;
+    background-color: $comic_success;
+    border: 1px solid $comic_primary_dark;
+
+    .price {
+        border-right: 1px solid $comic_primary_dark;
+        padding: 1rem;
+        flex-grow: 1;
+    }
+}
+
+p.comic_color_light {
+    font-size: 0.8rem;
+}
+
+.specific_details {
+    height: 380px;
+    width: 100%;
+
+    .specific_details_box {
+        width: 50%;
+        font-size: 0.8rem;
+    }
+
+}
