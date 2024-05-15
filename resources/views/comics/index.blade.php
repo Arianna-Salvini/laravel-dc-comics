@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="container">
-        <div class="table-responsive">
-            <table class="table table-primary">
+        <div class="table">
+            <table class="table table-primary m-5">
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
@@ -34,7 +34,12 @@
                             <td>{{ $comic->type }}</td>
                             <td>{{ $comic->writers }}</td>
                             <td>{{ $comic->artists }}</td>
-                            <td>edit/view/delete</td>
+                            <td>
+                                <a href="#">edit</a>
+                                <a href="#">view</a>
+                                <a href="#">delete</a>
+                            </td>
+
 
                         </tr>
                     @empty
