@@ -19,6 +19,7 @@ return new class extends Migration
             $table-> string('price', 15)->nullable();
             $table-> string('series', 50)->nullable();
             $table-> date('sale_date')->nullable();
+            $table-> string('type', 50)->nullable();
             $table-> string('writers')->nullable();
             $table-> string('artists')->nullable();
             $table->timestamps();
