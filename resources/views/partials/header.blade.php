@@ -12,8 +12,8 @@
         </nav>
         <nav class="nav justify-content-center align-items-center px-3">
 
-            <a class="nav-link {{ Route::currentRouteName() === 'comic_books' ? 'active_nav' : '' }}"
-                href="{{ route('comic_books') }}">Add Comics</a>
+            <a class="nav-link {{ Route::currentRouteName() === 'comic_books' ? 'active_nav' : '' }}" href="#">Add
+                Comics</a>
         </nav>
         <div class="searchbar ps-3">
             <form class="d-flex search-input" role="search">

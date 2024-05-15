@@ -7,9 +7,9 @@
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">TITLE</th>
-                        <th scope="col">DESCRIPTION</th>
                         <th scope="col">THUMB/IMAGE</th>
+                        <th scope="col">TITLE</th>
+                        {{-- <th scope="col">DESCRIPTION</th> --}}
                         <th scope="col">PRICE</th>
                         <th scope="col">SERIES</th>
                         <th scope="col">SALE DATE</th>
@@ -23,13 +23,19 @@
                     @forelse ($comics as $comic)
                         <tr class="">
                             <td scope="row">{{ $comic->id }}</td>
-                            <td>R1C2</td>
-                            <td>R1C3</td>
-                        </tr>
-                        <tr class="">
-                            <td scope="row">Item</td>
-                            <td>Item</td>
-                            <td>Item</td>
+                            <td>
+                                <img src="{{ $comic->thumb }}" alt="" style="width:150px">
+                            </td>
+                            <td>{{ $comic->title }} </td>
+                            {{-- <td>{{ $comic->description }}</td> --}}
+                            <td>{{ $comic->price }}</td>
+                            <td>{{ $comic->series }}</td>
+                            <td>{{ $comic->sale_date }}</td>
+                            <td>{{ $comic->type }}</td>
+                            <td>{{ $comic->writers }}</td>
+                            <td>{{ $comic->artists }}</td>
+                            <td>edit/view/delete</td>
+
                         </tr>
                     @empty
                         <td scope="row">Nothing to show</td>
