@@ -61,6 +61,18 @@ a.nav-link {
     border-bottom: 2px solid $comic_primary;
 }
 
+.btn_over {
+
+    &:hover {
+        color: $comic_lighter;
+    }
+
+    a {
+        color: inherit;
+    }
+
+}
+
 // Comics page
 .label {
     color: $comic_lighter;

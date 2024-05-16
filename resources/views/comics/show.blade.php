@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
 
-        <div class="d-flex">
+        <div class="d-flex flex-row">
             <div class="comic_img mx-5">
                 <img src="{{ $comic->thumb }}" alt="Image of {{ $comic->title }}" class="shadow-lg">
             </div>

@@ -34,10 +34,27 @@
                             <td>{{ $comic->type }}</td>
                             <td>{{ $comic->writers }}</td>
                             <td>{{ $comic->artists }}</td>
-                            <td>
-                                <a href="{{ route('comics.show', $comic) }}">edit</a>
-                                <a href="#">view</a>
-                                <a href="#">delete</a>
+                            <td class="d-flex flex-column justify-content-center align-items-center">
+                                <button type="button" class="btn btn-outline-primary my-1 btn_over">
+                                    <a href="{{ route('comics.show', $comic) }}"><i class="fa fa-eye fa-fs fa-fw"
+                                            aria-hidden="true"></i></a>
+                                </button>
+
+                                <button type="button" class="btn btn-outline-primary my-1 btn_over">
+                                    <a href="{{ route('comics.show', $comic) }}">
+                                        <i class="fa fa-pencil fa-fs fa-fw" aria-hidden="true"></i>
+                                    </a>
+                                </button>
+
+                                <button type="button" class="btn btn-outline-danger my-1 btn_over">
+                                    <a href="{{ route('comics.show', $comic) }}">
+                                        <i class="fa fa-trash fa-fs fa-fw " aria-hidden="true"></i>
+                                    </a>
+                                </button>
+
+
+
+
                             </td>
 
 
