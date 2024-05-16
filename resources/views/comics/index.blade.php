@@ -35,7 +35,7 @@
                             <td>{{ $comic->writers }}</td>
                             <td>{{ $comic->artists }}</td>
                             <td>
-                                <a href="#">edit</a>
+                                <a href="{{ route('comics.show', $comic) }}">edit</a>
                                 <a href="#">view</a>
                                 <a href="#">delete</a>
                             </td>

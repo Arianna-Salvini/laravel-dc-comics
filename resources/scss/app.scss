@@ -162,38 +162,14 @@ footer {
 //Single page layout
 
 .comic_img {
-    height: 250px;
+    height: 100%;
     width: fit-content;
-    margin-top: -260px;
-    position: relative;
 
     >img {
         height: 100%;
         object-fit: contain;
         border: 2px solid white;
-    }
-
-    .label_comic {
-        color: white;
-        font-size: 0.8rem;
-        background-color: $comic_primary_light;
-        padding: 0.1rem 0.4rem;
-        margin-left: 10px;
-        left: -8px;
-    }
-
-    .label_comic.type {
-        position: absolute;
-        top: -10px;
-        transform: translate(0%, 50%);
-    }
-
-    .label_comic.view {
-        width: calc(100% - 4px);
-        text-align: center;
-        position: absolute;
-        bottom: 12px;
-        transform: translate(0%, 50%);
+        margin: 3rem 0 3rem 3rem;
     }
 }
 
