@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="container">
-        <div class="table">
-            <table class="table table-primary m-5">
+        <div class="table ">
+            <table class="table table-bordered table-striped table-hover table-primary m-5">
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
@@ -34,30 +34,26 @@
                             <td>{{ $comic->type }}</td>
                             <td>{{ $comic->writers }}</td>
                             <td>{{ $comic->artists }}</td>
-                            <td class="d-flex flex-column justify-content-center align-items-center">
-                                <button type="button" class="btn btn-outline-primary my-1 btn_over">
-                                    <a href="{{ route('comics.show', $comic) }}"><i class="fa fa-eye fa-fs fa-fw"
-                                            aria-hidden="true"></i></a>
-                                </button>
+                            <td>
+                                <div class="d-flex flex-column align-items-center">
+                                    <button type="button" class="btn btn-outline-primary my-1 btn_over">
+                                        <a href="{{ route('comics.show', $comic) }}"><i class="fa fa-eye fa-fs fa-fw"
+                                                aria-hidden="true"></i></a>
+                                    </button>
 
-                                <button type="button" class="btn btn-outline-primary my-1 btn_over">
-                                    <a href="{{ route('comics.show', $comic) }}">
-                                        <i class="fa fa-pencil fa-fs fa-fw" aria-hidden="true"></i>
-                                    </a>
-                                </button>
+                                    <button type="button" class="btn btn-outline-primary my-1 btn_over">
+                                        <a href="{{ route('comics.show', $comic) }}">
+                                            <i class="fa fa-pencil fa-fs fa-fw" aria-hidden="true"></i>
+                                        </a>
+                                    </button>
 
-                                <button type="button" class="btn btn-outline-danger my-1 btn_over">
-                                    <a href="{{ route('comics.show', $comic) }}">
-                                        <i class="fa fa-trash fa-fs fa-fw " aria-hidden="true"></i>
-                                    </a>
-                                </button>
-
-
-
-
+                                    <button type="button" class="btn btn-outline-danger my-1 btn_over">
+                                        <a href="{{ route('comics.show', $comic) }}">
+                                            <i class="fa fa-trash fa-fs fa-fw " aria-hidden="true"></i>
+                                        </a>
+                                    </button>
+                                </div>
                             </td>
-
-
                         </tr>
                     @empty
                         <td scope="row">Nothing to show</td>
