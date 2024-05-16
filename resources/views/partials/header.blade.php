@@ -12,7 +12,8 @@
         </nav>
         <nav class="nav justify-content-center align-items-center px-3">
 
-            <a class="nav-link {{ Route::currentRouteName() === 'comic_books' ? 'active_nav' : '' }}" href="#">Add
+            <a class="nav-link {{ Route::currentRouteName() === 'comics.create' ? 'active_nav' : '' }}"
+                href="{{ route('comics.create') }}">Add
                 Comics</a>
         </nav>
         <div class="searchbar ps-3">
