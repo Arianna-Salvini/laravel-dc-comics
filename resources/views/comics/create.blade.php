@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container py-5">
-        <h1>Updating New Comics </h1>
+    <div class="container my-5">
+        <h1 class="p-3 bg_dc_primary text-white mb-5">Updating New Comics </h1>
         <form action="{{ route('comics.store') }}" method="post">
             @csrf
 
