@@ -13,8 +13,10 @@ class ComicController extends Controller
     public function index()
     {
         // dd(Comic::all());
-        $comics= Comic::orderByDesc('id')->paginate(12);
-        return view('comics.index', compact('comics'));
+        // $comics= Comic::orderByDesc('id')->paginate(6);
+        // return view('comics.index', compact('comics'));
+        return view('comics.index', ['comics'=>Comic::orderByDesc('id')->paginate(6)]);
+
     }
 
     /**
