@@ -2,8 +2,14 @@
 
 @section('content')
     <div class="container">
+        <div class="d-flex justify-content-between alig-items-center pt-5">
+            <h2>Comics List Updated</h2>
+            <button type="button" class="btn btn-primary my-1 btn_over">
+                <a href="{{ route('comics.create') }}">Add Comic</a>
+            </button>
+        </div>
         <div class="table ">
-            <table class="table table-bordered table-striped table-hover table-primary m-5">
+            <table class="table table-bordered table-striped table-hover table-primary mt-3">
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
@@ -67,7 +73,6 @@
                         <td scope="row">Nothing to show</td>
                         <td scope="row">Nothing to show</td>
                     @endforelse
-
                 </tbody>
             </table>
         </div>
