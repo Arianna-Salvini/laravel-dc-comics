@@ -57,6 +57,10 @@ a.nav-link {
     object-position: top;
 }
 
+main {
+    min-height: 500px;
+}
+
 .search-input {
     border-bottom: 2px solid $comic_primary;
 }
@@ -174,8 +178,9 @@ footer {
 //Single page layout
 
 .comic_img {
-    height: 100%;
+    height: 700px;
     width: fit-content;
+    padding-bottom: 6rem;
 
     >img {
         height: 100%;
