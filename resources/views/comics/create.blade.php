@@ -34,12 +34,22 @@
             </div>
 
 
+
             <div class="mb-3">
                 <label for="price" class="form-label text-primary">Price</label>
                 <input type="text" class="form-control" name="price" id="price" aria-describedby="priceHelper" />
                 <small id="priceHelper" class="form-text text-muted">
                     Type the comic's price
-                    <i class="fa fa-dollar" aria-hidden="true"></i>
+                    <i class="fa fa-dollar" aria-hidden="true">$</i>
+                </small>
+            </div>
+
+            <div class="mb-3">
+                <label for="series" class="form-label text-primary">Series</label>
+                <input type="text" class="form-control" name="series" id="series" aria-describedby="seriesHelper" />
+                <small id="seriesHelper" class="form-text text-muted">
+                    Type the comic's series
+                    <i class="fa fa-bookmark-o" aria-hidden="true"></i>
                 </small>
             </div>
 
@@ -73,7 +83,8 @@
 
             <div class="mb-3">
                 <label for="artists" class="form-label text-primary">Artists</label>
-                <input type="text" class="form-control" name="artists" id="artists" aria-describedby="artistsHelper" />
+                <input type="text" class="form-control" name="artists" id="artists"
+                    aria-describedby="artistsHelper" />
                 <small id="artistsHelper" class="form-text text-muted">
                     Type story artists
                     <i class="fa fa-address-card-o" aria-hidden="true"></i>
