@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container my-5">
-        <h1 class="p-3 bg_dc_primary text-white mb-5">Updating New Comics </h1>
+        <h1 class="p-3 bg_dc_primary text-white mb-5">Adding New Comics </h1>
         <form action="{{ route('comics.store') }}" method="post">
             @csrf
 
@@ -91,7 +91,7 @@
                 </small>
             </div>
             <button type="submit" class="btn btn-primary p-3 px-5 mt-4">
-                Update
+                Save
             </button>
 
         </form>
