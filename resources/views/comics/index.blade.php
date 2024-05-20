@@ -48,15 +48,60 @@
                                     </button>
 
                                     <button type="button" class="btn btn-outline-primary my-1 btn_over">
-                                        <a href="{{ route('comics.show', $comic) }}">
+                                        <a href="{{ route('comics.edit', $comic) }}">
                                             <i class="fa fa-pencil fa-fs fa-fw" aria-hidden="true"></i>
                                         </a>
                                     </button>
 
+                                    <!-- Modal trigger button -->
+                                    <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal"
+                                        data-bs-target="#modalId">
+                                        Launch
+                                    </button>
+
+                                    <!-- Modal Body -->
+                                    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+                                    <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static"
+                                        data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId"
+                                        aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
+                                            role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="modalTitleId">
+                                                        Modal title
+                                                    </h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">Body</div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-bs-dismiss="modal">
+                                                        Close
+                                                    </button>
+                                                    <button type="button" class="btn btn-primary">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Optional: Place to the bottom of scripts -->
+                                    <script>
+                                        const myModal = new bootstrap.Modal(
+                                            document.getElementById("modalId"),
+                                            options,
+                                        );
+                                    </script>
+
+                                    <form action="{{ route('comics.destroy', $comic) }}" method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                    </form>
                                     <button type="button" class="btn btn-outline-danger my-1 btn_over">
-                                        <a href="{{ route('comics.show', $comic) }}">
-                                            <i class="fa fa-trash fa-fs fa-fw " aria-hidden="true"></i>
-                                        </a>
+
+                                        <i class="fa fa-trash fa-fs fa-fw " aria-hidden="true"></i>
+
                                     </button>
                                 </div>
                             </td>
@@ -73,6 +118,7 @@
                         <td scope="row">Nothing to show</td>
                         <td scope="row">Nothing to show</td>
                     @endforelse
+
                 </tbody>
             </table>
         </div>
